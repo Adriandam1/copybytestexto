@@ -37,7 +37,7 @@ APLICACION :
 2_1)Desenvolve unha pequena aplicacion  chamada 'copybytestexto'  que usando somente estas duas clases e os metodos indicados  copie  byte a byte o contido do  ficheiro de texto chamado texto1.txt noutro ficheiro chamado texto2.txt
 
 2_2) Fai a modificacion necesaria na aplicacion anterior para que se engada de novo o texto do ficheiro texto1.txt ao ficheiro texto2.txt ( e dicir facer o cambio necesario para que non o sobreescriba , polo que cada vez que executemos a apliciacion , o ficheiro de texto texto2.txt vera aumentado o seu contido cas tres palabras do texto1.txt de novo)
-
+https://docs.oracle.com/javase/8/docs/api/java/io/FileOutputStream.html
  */
 
 import java.io.FileInputStream;
