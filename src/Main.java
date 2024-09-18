@@ -40,9 +40,32 @@ APLICACION :
 
  */
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 public class Main {
     public static void main(String[] args) {
+        try (
+            // creo e indico los FileInputStream y FileOutputStream
+            FileInputStream inputStream = new FileInputStream("texto1.txt");
+            // Pongo false para sobreescribir el archivo si lo hubiese de texto2.txt
+            FileOutputStream outputStream = new FileOutputStream("texto2.txt", false);
 
+            ){
+            // variable para el numero de byte
+            int numeroByte;
 
+            // Bucle while para leer byte a byte el archivo texto1.txt
+            // cuando llega al final el valor es -1
+            while ((numeroByte = inputStream.read()) != -1) {
+                // Escribir cada byte en texto2.txt
+                outputStream.write(numeroByte);
+            }
+        // catch IOException
+        } catch (IOException e) {
+
+            System.out.println("Se produjo un error: " + e.getMessage());
+        }
     }
 }
