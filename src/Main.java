@@ -46,6 +46,8 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
+        // Mensaje de inicio
+        System.out.println("Iniciando el proceso de copia... crucemos los dedos");
         try (
             // creo e indico los FileInputStream y FileOutputStream
             FileInputStream inputStream = new FileInputStream("texto1.txt");
@@ -64,6 +66,9 @@ public class Main {
                 // Escribir cada byte en texto2.txt
                 outputStream.write(numeroByte);
             }
+            // Mensaje de confirmacion
+            System.out.println("Copia realizada con exito!");
+
         // catch IOException
         } catch (IOException e) {
 
