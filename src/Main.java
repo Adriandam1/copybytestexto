@@ -50,14 +50,16 @@ public class Main {
             // creo e indico los FileInputStream y FileOutputStream
             FileInputStream inputStream = new FileInputStream("texto1.txt");
             // Pongo false para sobreescribir el archivo si lo hubiese de texto2.txt
-            FileOutputStream outputStream = new FileOutputStream("texto2.txt", false);
+            //FileOutputStream outputStream = new FileOutputStream("texto2.txt", false);
 
+            // Utilizo true para que añada al final en vez de sobreescribir
+            FileOutputStream outputStream = new FileOutputStream("texto2.txt", true);
             ){
             // variable para el numero de byte
             int numeroByte;
 
             // Bucle while para leer byte a byte el archivo texto1.txt
-            // cuando llega al final el valor es -1
+            // cuando llega al final el valor es -1 con el bucle leemos hasta que el valor es -1 osea el ultimo byte
             while ((numeroByte = inputStream.read()) != -1) {
                 // Escribir cada byte en texto2.txt
                 outputStream.write(numeroByte);
